@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { getDrinks, setDrink, updateDrink, deleteDrink, getAllDrinks } = require('../controllers/itemController')
+const { getDrinks, setDrink, updateDrink, deleteDrink, getAllDrinks } = require('../controllers/drinkController')
 const { protect } = require('../middleware/authMiddleware')
 
 router.get('/', protect, getDrinks)

@@ -6,7 +6,7 @@ const port = process.env.PORT || 3001
 const app = express()
 
 // Imported Routes
-const itemRoutes = require('./routes/itemRoutes')
+const drinkRoutes = require('./routes/drinkRoutes')
 const userRoutes = require('./routes/userRoutes')
 
 const { errorHandler } = require('./middleware/errorMiddleware')
@@ -26,7 +26,7 @@ app.get('/hello', (req, res) => {
   res.status(200).json({message: 'Hello World'})
 })
 
-app.use('/api/items', itemRoutes)
+app.use('/api/drinks', drinkRoutes)
 app.use('/api/users', userRoutes)
 
 if (process.env.NODE_ENV === 'production') {
